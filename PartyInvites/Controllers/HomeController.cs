@@ -18,8 +18,16 @@ namespace PartyInvites.Controllers
             return View("MyView");
         }
 
+        [HttpGet] // HttpGet отвеяает зо отображение изначально пустой формы
         public ViewResult RsvpForm()
         {
+            return View();
+        }
+
+        [HttpPost] // HttpPost отвечает за получение данных + принятие решения о том что с ними делать
+        public ViewResult RsvpForm(GuestResponce guestResponce)
+        {
+            // Что сделать: сохранить ответ от гостя
             return View();
         }
     }
