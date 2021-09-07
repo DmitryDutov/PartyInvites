@@ -30,5 +30,10 @@ namespace PartyInvites.Controllers
             Repository.AddResponce(guestResponce);
             return View("Thanks", guestResponce);
         }
+
+        public ViewResult ListResponses()
+        {
+            return View(Repository.Responces.Where(r => r.WillAttend == true));
+        }
     }
 }
