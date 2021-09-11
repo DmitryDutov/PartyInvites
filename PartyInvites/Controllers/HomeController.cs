@@ -31,7 +31,6 @@ namespace PartyInvites.Controllers
             {
                 Repository.AddResponce(guestResponce);
                 return View("Thanks", guestResponce);
-
             }
             else
             {
