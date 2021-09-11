@@ -27,8 +27,16 @@ namespace PartyInvites.Controllers
         [HttpPost] // HttpPost отвечает за получение данных + принятие решения о том что с ними делать
         public ViewResult RsvpForm(GuestResponce guestResponce)
         {
-            Repository.AddResponce(guestResponce);
-            return View("Thanks", guestResponce);
+            if (ModelState.IsValid)
+            {
+                Repository.AddResponce(guestResponce);
+                return View("Thanks", guestResponce);
+
+            }
+            else
+            {
+                return View();
+            }
         }
 
         public ViewResult ListResponses()
