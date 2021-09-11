@@ -1,5 +1,5 @@
 ﻿@model IEnumerable<PartyInvites.Models.GuestResponce>
-@{ 
+@{
     Layout = null;
 }
 
@@ -7,7 +7,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <title>ListResponses</title>
 </head>
 <body>
     <h2>
@@ -25,11 +25,11 @@
             @foreach (PartyInvites.Models.GuestResponce r in Model)
             {
 
-            <tr>
-                <td>@r.Name</td>
-                <td>@r.Email</td>
-                <td>@r.Phone</td>
-            </tr>
+                <tr>
+                    <td>@r.Name</td>
+                    <td>@r.Email</td>
+                    <td>@r.Phone</td>
+                </tr>
             }
         </tbody>
     </table>
